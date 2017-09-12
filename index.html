@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>assFormatter</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<style>
+		#dialogue {
+			font-family: 'Microsoft YaHei';
+			font-size: 18px;
+		}
+	</style>
+    <script type="text/javascript">
+        function readDialogue() {
+            var file = document.getElementById("file").files[0];
+			var reader = new FileReader();
+			reader.readAsText(file);
+			reader.onload = function(e) {
+				var dialogue = document.getElementById("dialogue");
+				dialogue.innerHTML = this.result.replace(/\[Script Info\][\s\S]*\[Events\]/g, '')	//头部信息
+				.replace(/Dialogue: \S*,,/g, '')	//时间戳
+				.replace(/{\S*}/g, '')	//字体信息
+				.replace(/Format:.*Text/g, '')	//格式信息
+				.replace(/m [\s\da-m]+\d/g, '')	//冗余数字
+				.replace(/\./g, '.<br>')	//句号换行
+				.replace(/\?/g, '?<br>')	//问号换行
+				.replace(/\\N/g, '<br>')	//换行
+				.replace(/\.<br>\.<br>\.<br>/g, '...')	//省略号
+			}
+        }
+    </script>
+</head>
+<body>
+	<div class="container">
+		<label for="file" class="btn btn-warning">choose file</label>
+		<input type="file" id="file" style="display: none;">
+		<button class="btn btn-success" onclick="readDialogue()">formatter file</button>
+		<article id="dialogue"></article>	
+	</div>	      
+</body>
+</html>
