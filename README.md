@@ -1,37 +1,16 @@
-## Welcome to GitHub Pages
+# Subtile Formatter
 
-You can use the [editor on GitHub](https://github.com/joriewong/subtitleFormatter/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## 字幕格式化
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 预处理
 
-### Markdown
+- 配置预处理规则
+- 兼容多类型字幕文件
+- 合理编排字幕形式
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### temporary
 
-```markdown
-Syntax highlighted code block
+- 格式粗优化
+- 对话抽取
+- 对照学习
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/joriewong/subtitleFormatter/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
